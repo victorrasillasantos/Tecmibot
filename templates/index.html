@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Institucional - Tecnologico nacional de Mexico / instituto tecnologico de Minatitlán</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="https://minatitlan.tecnm.mx/wp-content/uploads/2023/01/Logo.png">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="https://minatitlan.tecnm.mx/wp-content/uploads/2023/01/Logo.png" alt="Logo TecNM" class="logo">
+            <div class="title">
+                <h1>Instituto Tecnológico de Minatitlán</h1>
+                <p>Tecnológico Nacional de México - Campus Minatitlán</p>
+                <p class="project-title">Chatbot Inteligente Personalizado</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Bienvenido al Asistente Virtual del Instituto Tecnológico de Minatitlán</h2>
+            <p>Chatbot personalizado de la institucion para detalles de documentos o requerimientos.</p>
+            <p>Puedes preguntar sobre los documentos de Residencias, Servicio social y los requerimientos de Nuevo ingreso, Reinscripciones</p>
+        </section>
+
+        <!-- ==================== CHAT PERSONALIZADO ==================== -->
+        <div id="chat-container">
+            <div id="chat-messages">
+                <!-- Los mensajes aparecerán aquí dinámicamente -->
+            </div>
+            <div id="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje aquí..." autocomplete="off">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Instituto Tecnológico de Minatitlán - TecNM</p>
+            <p>Instituto tecnologico de Minatitlán</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para manejar el chat -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

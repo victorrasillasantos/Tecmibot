@@ -1,0 +1,182 @@
+/* Colores oficiales TecNM */
+:root {
+    --primary: #6295d4;        /* Azul principal */
+    --accent: #00AEEF;
+    --background: #f8f9fa;
+    --border-blue: #6295d4;    /* Para los bordes del contenedor */
+}
+
+/* Estilos generales */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    background: var(--background); 
+}
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+header { 
+    background: var(--primary); 
+    color: white; 
+    padding: 20px 0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+.header-content { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+.logo { 
+    height: 100px; 
+}
+
+/* ──────────────── SECCIÓN DE BIENVENIDA (rectángulo) ──────────────── */
+.welcome { 
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* DEGRADADO HORIZONTAL: verde izquierda → blanco centro → azul derecha */
+    background: linear-gradient(
+        to right,
+        #006341 0%,          
+        #006341 30%,         
+        #ffffff 35%,         
+        #ffffff 65%,         
+        var(--primary) 70%,  
+        var(--primary) 100%  
+    );
+
+    color: #000000;                      /* Texto negro por defecto en toda la sección */
+    border: 2px solid var(--primary);
+}
+
+/* TÍTULO DE BIENVENIDA EN NEGRO (como pediste) */
+.welcome h2 {
+    color: #000000;                      /* ← Cambio principal: negro */
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9); /* Sombra blanca fuerte para que resalte sobre verde y azul */
+    margin-bottom: 1.2em;
+    font-size: 2em;
+}
+
+/* Párrafos (ya heredan negro del padre .welcome) */
+.welcome p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin: 1em 0;
+}
+
+/* Palabras en strong (opcional: azul para resaltar temas) */
+.welcome strong {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+footer { 
+    background: var(--primary); 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    margin-top: 50px; 
+}
+
+/* ==================== CHAT PERSONALIZADO ==================== */
+#chat-container {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    border: 3px solid var(--border-blue);
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 25px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+    /* Fondo con imagen desde internet */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Logo-TecNM-2017.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.82);
+    background-blend-mode: overlay;
+}
+
+.message {
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 22px;
+    line-height: 1.45;
+    word-wrap: break-word;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: var(--primary);
+    color: white;
+    border-bottom-right-radius: 6px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #e8f0fe;
+    color: #1e293b;
+    border-bottom-left-radius: 6px;
+}
+
+#chat-input {
+    display: flex;
+    padding: 16px 20px;
+    border-top: 1px solid #e0e0e0;
+    background: #fafafa;
+    gap: 12px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+#user-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(98, 149, 212, 0.2);
+}
+
+#send-button {
+    padding: 14px 28px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+#send-button:hover { 
+    background: #4a78b8;
+    transform: translateY(-1px);
+}
